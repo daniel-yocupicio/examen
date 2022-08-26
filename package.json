@@ -1,0 +1,16 @@
+{
+  "name": "examen",
+  "version": "1.0.0",
+  "description": "examen de prueba para la empresa turing-ia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "author": "daniel guadalupe yocupicio vazquez",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "path": "^0.12.7"
+  }
+}
