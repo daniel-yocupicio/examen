@@ -1,0 +1,183 @@
+    @font-face {
+        font-family: SlalomSansBold;
+        src: url('../fonts/CASlalom-Bold.otf');
+    }
+
+    @font-face {
+        font-family: SlalomSansLight;
+        src: url('../fonts/CASlalom-Light.otf');
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: SlalomSansBold;
+    }
+
+    body {
+        width: 100vw;
+    }
+
+    .top-bar {
+        position: relative;
+        width: 100%;
+        height: 41rem;
+        background: #00000020;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 3.1416rem;
+        padding-top: 1rem;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .logo-container {
+        display: flex;
+    }
+
+    div a {
+        text-decoration: none;
+    }
+
+    a span {
+        color: #fff;
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    a span:hover {
+        text-decoration: underline;
+    }
+
+    .letstalk {
+        border-color: #ffffff;
+        border: 1px solid;
+    }
+
+    .letstalk:hover {
+        background: #ffffff;
+        color: #0c62fb;
+    }
+
+    a button {
+        color: #fff;
+        font-weight: 400;
+        background: transparent;
+        border-color: transparent;
+        font-size: 20px;
+    }
+
+    li {
+        padding: 20;
+    }
+
+    div a h1 {
+        color: #fff;
+    }
+
+    .logo {
+        font-size: 45px;
+    }
+
+    .video {
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: -1;
+    }
+
+    .toplist {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        align-items: center;
+        margin-right: -15px;
+    }
+
+    .title{
+        color: #ffffff;
+        position: absolute;
+        top: 50%;
+        font-size: 4rem;
+        max-width: 500px;
+        font-weight: 0;
+        font-family: SlalomSansLight;
+    }
+
+    .toplist li a button {
+        padding: 10px 15px;
+    }
+
+    .leng:hover {
+        color: #ffffff80
+    }
+
+    .bottomlist {
+        display: flex;
+        gap: 40px;
+    }
+
+    .list1 {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .menu {
+        display: none;
+        background: transparent;
+        border-color: transparent;
+    } 
+
+    .menu span {
+        display: block;
+        width: 35px;
+        height: 3px;
+        margin-bottom: 5px;
+        transform-origin: 0 0;
+        background: #ffffff;
+        transition: .4s;
+    }
+
+    #check {
+        display: none;
+    }
+    
+    @media (max-width: 1115px) {
+        .top-bar { 
+            height: 30rem;
+        }
+    }
+
+    @media (max-width: 950px) {
+        .top-bar { 
+            height: 25rem;
+        }
+
+        .title {
+            font-size: 3rem;
+        }
+    }
+
+    @media (max-width: 850px) {
+        .top-bar { 
+            height: 20rem;
+        }
+
+        .title {
+            font-size: 2rem;
+        }
+        .list1 {
+            display: none;
+        }
+        .menu {
+            display: block;
+        }
+    }
