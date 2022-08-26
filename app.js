@@ -1,9 +1,11 @@
 var express = require("express");
-var path = require("path");
+const { error404Handler, errorHandler } = require('./middleware');
 
 var app = express();
 
-app.set("port", process.env.PORT || 3000);
-app.listen(app.get("port"), function(){
-    console.log("Server en el puerto: " + app.get("port"));
-});
+app.use(express.json());
+
+app.use(error404Handler);
+app.use(errorHandler);
+
+module.exports = app;
