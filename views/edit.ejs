@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit user</title>
+    <link rel="stylesheet" href="css/headerstyles.css" >
+    <link rel="stylesheet" href="css/registerstyle.css" >
+</head>
+<body>
+    <%- include('header') %>
+    <div class="container">
+        <div class="form-container">
+            <form action="/api/useredit" method="put">
+                <input class="text" title="nombre" name="nombre" value="<%= user.nombre %>">
+                <input class="text" title="apellidos" name="apellidos" value="<%= user.apellidos %>">
+                <input class="text" title="correo_electronico" name="correo_electronico" value="<%= user.correo_electronico %>">
+                <input class="text" title="numero_tel" name="numero_tel" value="<%= user.numero_tel %>">
+                <input class="text" title="pais" name="pais" value="<%= user.pais %>">
+                <input class="text" title="cp" name="cp" value="<%= user.cp %>">
+                <input class="text" title="estado" name="estado" value="<%= user.estado %>">
+                <input class="text" title="municipio" name="municipio" value="<%= user.municipio %>">
+                <input class="text" title="localidad" name="localidad" value="<%= user.localidad %>">
+                <input class="text" title="colonia" name="colonia" value="<%= user.colonia %>">
+                <input class="text" title="calle" name="calle" value="<%= user.calle %>">
+                <input class="button" type="submit">
+            </form>
+        </div>
+    </div>
+    <script src="js/edit.js"></script>
+    <script src="js/logout.js"></script>
+</body>
+</html>

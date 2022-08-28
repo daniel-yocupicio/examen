@@ -1,0 +1,18 @@
+<div class="top-bar">
+    <nav>
+        <a href="/"><h1 class="title">TURING-IA</h1></a>
+        <div class="buttons">
+            <ul class = "list">
+                <% if(!user?.nombre) { %> 
+                    <li><a href="/login"><span>Login</span></a></li> 
+                    <li><a href="/register"><span>Register</span></a></li>
+                <% } else { %> 
+                    <li><a href="/"><span>Home</span></a></li>
+                    <li><a href="/users"><span>Show users</span></a></li>
+                    <li><a href="#" onclick="logout()"><span>Logout</span></a></li>
+                    <li><a href="/edit"><span>Edit user</span></a></li>
+                <% } %>
+            </ul>
+        </div>
+    </nav>
+</div>

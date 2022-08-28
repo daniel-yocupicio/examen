@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/headerstyles.css" >
+    <link rel="stylesheet" href="css/loginstyle.css" >
+</head>
+<body>
+    <%- include('header') %>
+    <div class="container">
+        <div class="form-container">
+            <form action="/api/userlogin" method="post">
+                <input class="text" title="correo_electronico" name="correo_electronico" placeholder="correo">
+                <input class="text" title="Contraseña" name="contraseña" placeholder="contraseña">
+                <input class="button" type="submit">
+            </form>
+        </div>
+    </div>
+    <script src="js/login.js"></script>
+</body>
+</html>

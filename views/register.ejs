@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register user</title>
+    <link rel="stylesheet" href="css/headerstyles.css" >
+    <link rel="stylesheet" href="css/registerstyle.css" >
+</head>
+<body>
+    <%- include('header') %>
+    <div class="container">
+        <div class="form-container">
+            <form action="/api/usercreate" method="post">
+                <input class="text" title="nombre" name="nombre" placeholder="Nombre">
+                <input class="text" title="apellidos" name="apellidos" placeholder="Apellidos">
+                <input class="text" title="correo_electronico" name="correo_electronico" placeholder="Correo">
+                <input class="text" title="contraseña" name="contraseña" placeholder="Contraseña">
+                <input class="text" title="numero_tel" name="numero_tel" placeholder="Número teléfono">
+                <input class="text" title="pais" name="pais" placeholder="País">
+                <input class="text" title="cp" name="cp" placeholder="Código postal">
+                <input class="text" title="estado" name="estado" placeholder="Estado">
+                <input class="text" title="municipio" name="municipio" placeholder="Municipio">
+                <input class="text" title="localidad" name="localidad" placeholder="Localidad">
+                <input class="text" title="colonia" name="colonia" placeholder="Colonia">
+                <input class="text" title="calle" name="calle" placeholder="Calle">
+                <input class="button" type="submit">
+            </form>
+        </div>
+    </div>
+    <script src="js/register.js"></script>
+</body>
+</html>

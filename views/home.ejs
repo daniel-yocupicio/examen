@@ -8,20 +8,6 @@
     <link rel="stylesheet" href="css/homestyle.css" />
 </head>
 <body>
-    <div class="modal">
-        <div>
-            <button class="closemodal">X</button>  
-            <ul class="modallist">
-                <li><a><span>what we do</span></a></li>
-                <li><a><span>who we are</span></a></li>
-                <li><a><span>insights</span></a></li>
-                <li><a><span>careers</span></a></li>   
-                <li><a><button class="letstalk">let´s talk</button></a></li>
-                <li><a><button><img src="images/lupa.png" width="20" height="20" /></button></a></li>
-                <li><a><button class="leng">english</button></a></li>
-            </ul>
-        </div>
-    </div>
     <section class="top-bar">
         <video class="video" src="https://drive.google.com/uc?export=download&id=1J_Y4xY_FGItfFan4xu0GBo1w73WYqxFT" loop autoplay muted playsinline></video>
         <nav class="navbar">
@@ -32,18 +18,15 @@
             </div>
             <div class="list1">
                 <div>
-                    <ul class="toplist">
-                        <li><a><button class="letstalk">let´s talk</button></a></li>
-                        <li><a><button><img src="images/lupa.png" width="20" height="20" /></button></a></li>
-                        <li><a><button class="leng">english</button></a></li>
-                    </ul>
-                </div>
-                <div>
                     <ul class="bottomlist">
-                        <li><a><span>what we do</span></a></li>
-                        <li><a><span>who we are</span></a></li>
-                        <li><a><span>insights</span></a></li>
-                        <li><a><span>careers</span></a></li>
+                        <% if(!user?.nombre) { %> 
+                            <li><a href="/login"><span>Login</span></a></li> 
+                            <li><a href="/register"><span>Register</span></a></li>
+                        <% } else { %> 
+                        <li><a href="#" onclick="logout()"><span>Logout</span></a></li>
+                        <li><a href="/edit"><span>Edit user</span></a></li>
+                        <li><a href="/users"><span>Show users</span></a></li>
+                        <% } %>
                     </ul>
                 </div>
             </div>
@@ -54,9 +37,9 @@
                 <span></span>
             </button>
 
-            <h1 class="title">Building better tomorrows</h1>
+            <h1 class="title"><%= user?.nombre === undefined ? 'Inicie sesion' : 'welcome ' + user?.nombre %></h1>
         </nav>
     </section>
-    <script src="js/homestyle.js"></script>
+    <script src="js/logout.js"></script>
 </body>
 </html>
